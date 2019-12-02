@@ -4,13 +4,13 @@ function request($url, $token = null, $data = null, $pin = null){
 $header[] = "Host: api.gojekapi.com";
 $header[] = "User-Agent: okhttp/3.10.0";
 $header[] = "Accept: application/json";
-$header[] = "Accept-Language: en-ID";
+$header[] = "Accept-Language: id-ID";
 $header[] = "Content-Type: application/json; charset=UTF-8";
-$header[] = "X-AppVersion: 3.30.2";
+$header[] = "X-AppVersion: 3.37.2";
 $header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
 $header[] = "Connection: keep-alive";
-$header[] = "X-User-Locale: en_ID";
-$header[] = "X-Location: -6.246265,106.690718";
+$header[] = "X-User-Locale: id_ID";
+$header[] = "X-Location: 38.5208742,-98.7923912";
 $header[] = "X-Location-Accuracy: 3.0";
 if ($pin):
 $header[] = "pin: $pin";
@@ -191,7 +191,7 @@ function claim($token)
     }
      function ride($token)
     {
-    $data = '{"promo_code":"COBAINGOJEK"}';    
+    $data = '{"promo_code":"WADAWGOJEK"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
